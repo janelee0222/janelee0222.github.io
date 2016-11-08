@@ -49,22 +49,3 @@ var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute','duScroll','ion
         redirectTo:'/Home'
     });
 }]);
-
-leenzzeApp.directive('scrolltop', 
-    [
-        '$ionicScrollDelegate',
-        function(
-            $ionicScrollDelegate
-            ) {
-                return {
-                    link: function (scope, element, attrs) {
-                        element.on('click', function (event) {
-                            //  - (element.height() +13)  + 70
-                            // Also testes scrollBy
-                            $ionicScrollDelegate.scrollTo(0, element.offset().top, true);
-                        });
-                    }
-                };
-            }
-    ]
-);
