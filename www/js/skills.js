@@ -18,7 +18,6 @@ leenzzeApp.controller('skillsCtrl',function($scope){
                         {skill:'mvc pattern',percent:8},
                         {skill:'agile',percent:7},
                         {skill:'mysql',percent:7},
-                        {skill:'cordova',percent:8},
-                        {skill:'bootstrap',percent:2}
+                        {skill:'cordova',percent:8}
                     ];
 });
