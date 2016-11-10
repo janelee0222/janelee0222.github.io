@@ -3,10 +3,10 @@ leenzzeApp.controller('homeCtrl',function($scope,$rootScope, $location, $ionicSl
 
     $scope.pageList = ['Profile','Skills','Portfolio','Experience'];
     $scope.slides = [
-                     {list:'Profile', img:'../img/introduce.jpg', text:'방문을 환영합니다! 저에 대해 알고 싶으시면 클릭해주세요!'},
-                     {list:'Skills', img:'../img/skill.jpg', text:'나의 기술에 대해 소개합니다.'},
-                     {list:'Portfolio', img:'../img/meeting.jpg', text:'구현한 프로젝트를 소개합니다.'},
-                     {list:'Experience', img:'../img/experience1.jpg', text:'지금껏 보고 배우고 익혀온 경험을 소개합니다.'}
+                     {list:'Profile', img:'www/img/introduce.jpg', text:'방문을 환영합니다! 저에 대해 알고 싶으시면 클릭해주세요!'},
+                     {list:'Skills', img:'www/img/skill.jpg', text:'나의 기술에 대해 소개합니다.'},
+                     {list:'Portfolio', img:'www/img/meeting.jpg', text:'구현한 프로젝트를 소개합니다.'},
+                     {list:'Experience', img:'www/img/experience1.jpg', text:'지금껏 보고 배우고 익혀온 경험을 소개합니다.'}
                     ];
 
     // $scope.click;                
