@@ -1,34 +1,30 @@
-<div class="fixed-header" id="myNavbar">
-  <div ng-click="scrollTop('section1')">송파패드</div>
-  <div ng-click="scrollTop('section2')">마스터패드</div>
-  <div ng-click="scrollTop('section3')">트레이너패드</div>
-  <div ng-click="scrollTop('section4')">e-brosure</div>
-  <div ng-click="scrollTop('section5')">CRM</div>
-  <div ng-click="scrollTop('section6')">아동사회성검사앱</div>
+<div class="port-header">
+  <div ng-click="scrollTop('project{{$index+1}}',$index)" 
+       ng-repeat="list in portfolioList" 
+       ng-class="{portcolor: hover || $index==clickItem}"  
+       ng-mouseenter="hover = true"
+       ng-mouseleave="hover = false"
+  >
+    {{list.name}}
+  </div>
 </div>
-<ion-scroll delegate-handle="mainScroll">
-  <div id="section1" ng-click="scrollTop('section3')" class="container-fluid aa">
-    <h1>송파패드</h1>
-    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+<div id="project{{$index+1}}" ng-repeat="list in portfolioList">
+  <div class="port-slide-wrap">
+    <ion-slide-box does-continue="true" pager-click="doSomething(index)" show-pager="true">
+        <ion-slide class="port-slide" ng-repeat="img in list.img track by $index">
+          <img ng-src={{img}} class="port-slide-img">
+        </ion-slide>
+    </ion-slide-box>
   </div>
-  <div id="section2" class="container-fluid aa">
-    <h1>마스터패드</h1>
-    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+  <div class="port-explain-wrap">
+    <text style="font-size:2.5em; margin-right: 2%;font-weight:bold;color:#000093;">{{list.name}}</text>
+    <span>{{list.period}}</span>
+    <p style=" font-size: 1.5em; margin-top: 2%; ">▶ {{list.explain}}</p>
+    <text>팀원 : {{list.member}}</text>
+    <span style="color: #747474;">- 기여도 : {{list.contribute}} </span>
+    <p style="font-size: 1.5em;margin-top: 2%; font-weight:bold;">작업 리스트</p>
+    <li ng-repeat="work in list.working">{{work}}</li>
+    <p style="font-size: 1.5em;margin-top: 2%;font-weight:bold;">사용 기술</p>
+    <li style="float:left; margin-right: 5%;" ng-repeat="skill in list.skills">{{skill}}</li>
   </div>
-  <div id="section3" ng-click="scrollTop('section3')" class="container-fluid aa">
-    <h1>트레이너패드</h1>
-    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
-  </div>
-  <div id="section4" ng-click="scrollTop('section3')" class="container-fluid aa">
-    <h1>e-brosure</h1>
-    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
-  </div>
-  <div id="section5" ng-click="scrollTop('section3')" class="container-fluid aa">
-    <h1>CRM</h1>
-    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
-  </div>
-  <div id="section6" ng-click="scrollTop('section3')" class="container-fluid aa">
-    <h1>아동사회성검사앱</h1>
-    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
-  </div>
-</ion-scroll>
+</div>
