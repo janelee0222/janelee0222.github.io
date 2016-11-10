@@ -1,7 +1,7 @@
 <div class="home-title">
     <ion-slide-box does-continue="true" auto-play="true" pager-click="doSomething(index)" show-pager="true" slider="data.slider" >
       <ion-slide ng-click="goPage(slide.list,$index+1)" ng-repeat="slide in slides">
-        <img ng-src={{slide.img}}>
+        <img class="home-slide-img" ng-src={{slide.img}}>
         <div class="home-slides">{{slide.text}}</div>
       </ion-slide>
     </ion-slide-box>

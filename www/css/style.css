@@ -4,21 +4,8 @@
   src: url('../css/basicfont.ttf') format('opentype');
 }
 
-@media (max-width:360px){html{font-size:10px;}}
-@media (min-width:361px) and (max-width:399px){html{font-size:11px;}}
-@media (min-width:400px) and (max-width:439px){html{font-size:12px;}}
-@media (min-width:440px) and (max-width:479px){html{font-size:13px;}}
-@media (min-width:480px) and (max-width:519px){html{font-size:14px;}}
-@media (min-width:520px) and (max-width:559px){html{font-size:15px;}}
-@media (min-width:560px) and (max-width:599px){html{font-size:16px;}}
-@media (min-width:600px) and (max-width:639px){html{font-size:17px;}}
-@media (min-width:640px) and (max-width:679px){html{font-size:18px;}}
-@media (min-width:680px) and (max-width:719px){html{font-size:19px;}}
-@media (min-width:720px) and (max-width:759px){html{font-size:20px;}}
-@media (min-width:760px) and (max-width:799px){html{font-size:21px;}}
-@media (min-width:800px) and (max-width:839px){html{font-size:22px;}}
-@media (min-width:840px) and (max-width:879px){html{font-size:23px;}}
-@media (min-width:880px){html{font-size:24px;}}
+@media (max-width:900px) {html{font-size:10px; display: none;}}
+@media (min-width:880px)and (max-width:1920px){html{font-size:24px;}}
 
 body, html {
   width: 100%;
@@ -72,6 +59,16 @@ body, html {
   color: #FFBB00;
 }
 
+div.slider {
+  width: 80%;
+  height: 100%;
+}
+
+ion-slide {
+  overflow: hidden ;
+  width: 100% ;
+}
+
 /* home */
 .home-title {
   width: 100%; 
@@ -81,6 +78,24 @@ body, html {
   justify-content: center;
   font-size: 1.5em;
   padding-top: 2%;
+}
+
+.home-slide-img {
+  width:100%;
+}
+
+.home-slides {
+  position: absolute;
+  top: 50%;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #000;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  height:15%;
 }
 
 .home-category {
@@ -114,7 +129,7 @@ body, html {
 }
 
 .profile-wrap .intro {
-  height: 20%;
+  height: 15%;
   width:100%;
   font-size: 1.5em;
   background-color: orange;
@@ -132,11 +147,11 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .profile-wrap .intro div:last-child {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .profile-wrap .list1 {
@@ -148,7 +163,7 @@ body, html {
 .profile-wrap .list1 .image {
   width: 30%;
   float:left;
-  padding: 3%;
+  padding: 3% 7%;
 }
 
 .profile-wrap .list1 .image img {
@@ -157,9 +172,8 @@ body, html {
 
 .profile-wrap .list1 .text {
   width: 70%;
-  height: 100%;
   font-size: 2em;
-  padding: 5% 0;
+  padding: 2% 0;
 }
 
 .profile-wrap .list1 .text p {
@@ -188,8 +202,8 @@ body, html {
 .profile-wrap .list2 .image {
   width: 30%;
   float:left;
-  padding: 3%;
-   height: 100%;
+  padding: 3% 7%;
+  height: 100%;
 }
 
 .profile-wrap .list2 .image img {
@@ -230,7 +244,7 @@ body, html {
 }
 
 .port-slide-wrap {
-  width:60%;
+  width:50%;
   height:100%;
   float: left;
   display: flex;
@@ -251,31 +265,6 @@ body, html {
   height:100%;
   padding-right: 5%;
 }
-
-div.slider {
-  width: 80%;
-  height: 100%;
-}
-
-ion-slide {
-  overflow: hidden ;
-  width: 100% ;
-}
-
-.home-slides {
-  position: absolute;
-  top: 50%;
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  color: #000;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-  height:15%;
-}
-
 
 /*skills*/
 
