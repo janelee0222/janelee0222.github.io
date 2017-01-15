@@ -6,29 +6,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link rel="manifest" href="manifest.json">
-
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
-
-    <link href="www/lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="www/css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
-    <script src="www/lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="app.js"></script>
@@ -36,32 +14,8 @@
     <!--lib-->
     <script src="www/lib/angular-route.js"></script>
 
-    <!--controller-->
-    <script src="www/js/index.js"></script>
-    <script src="www/js/home.js"></script>
-    <script src="www/js/profile.js"></script>
-    <script src="www/js/skills.js"></script>
-    <script src="www/js/portfolio.js"></script>
-    <script src="www/js/experience.js"></script>
-     <script src="www/js/barchart.js"></script>
-
-      <!--service-->
-    <script src="js/shared-data.js"></script>
-
-
   </head>
-  <body ng-app="leenzzeApp">
-   <div class="common-headerbar" ng-controller="indexCtrl">
-      <div ng-click="goPage(Home)" style="width: 30%; float:left; margin-right: 20%; text-align:left;">
-        <img style="width:15%; float:left; border-radius:20px; margin-right: 10px;" src="img/headerimg.jpg">
-        <div style="font-size: 1.6em;">LEE EUN JI</div>
-        <div style="font-size: 0.7em;">FRONT END DEVELOPER</div>
-      </div>
-      <div style="width: 10%; float:left;" ng-repeat="mn in menu" ng-click="goPage(mn.name)">
-        <i class="{{mn.icon}}"></i>
-        <div>{{mn.name}}</div>
-      </div>
-    </div>
-    <div ng-view class="wrap"></div>
+  <body>
+    <h1>janelee's homepage</h1>
   </body>
 </html>
